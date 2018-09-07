@@ -8,12 +8,12 @@ import java.util.List;
 import static java.util.Arrays.asList;
 import static org.junit.Assert.assertEquals;
 
-public class Java8StreamFileReaderTest {
-    private Java8StreamFileReader fileReader;
+public class Java8StreamMyFileReaderTest {
+    private Java8StreamMyFileReader fileReader;
 
     @Before
     public void setUp() {
-        fileReader = new Java8StreamFileReader();
+        fileReader = new Java8StreamMyFileReader();
     }
 
     @Test
