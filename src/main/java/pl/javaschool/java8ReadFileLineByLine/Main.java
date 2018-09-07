@@ -1,5 +1,6 @@
 package pl.javaschool.java8ReadFileLineByLine;
 
+import pl.javaschool.java8ReadFileLineByLine.bufferedReaderAndStream.BufferedReaderAndStreamMyFileReader;
 import pl.javaschool.java8ReadFileLineByLine.java8Stream.Java8StreamFilterMyFileReader;
 import pl.javaschool.java8ReadFileLineByLine.java8Stream.Java8StreamMyFileReader;
 
@@ -14,11 +15,15 @@ public class Main {
 
         System.out.println("Reading file [Java 8 + Stream + Filtering]:");
         readFileAndPrintToConsole(new Java8StreamFilterMyFileReader());
+
+        System.out.println("Reading file [BufferedReader + Stream]:");
+        readFileAndPrintToConsole(new BufferedReaderAndStreamMyFileReader());
+
     }
 
     private static void readFileAndPrintToConsole(MyFileReader myFileReader) {
-        List<String> lines =  myFileReader.readFile(DIR + "lines.txt");
-        System.out.println(lines);
+        List<String> lines = myFileReader.readFile(DIR + "lines.txt");
+        System.out.println(lines + "\n");
     }
 
 }
